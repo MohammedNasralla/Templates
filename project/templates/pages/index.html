@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>معلوماتي الشخصية</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: white;
+      margin: auto;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>معلوماتي الشخصية</h2>
+    <p><span class="label">الاسم الكامل:</span> {{ full_name }}</p>
+    <p><span class="label">رقم الطالب:</span> {{ student_id }}</p>
+    <p><span class="label">العنوان:</span> {{ address }}</p>
+    <p><span class="label">البريد الإلكتروني:</span> {{ email }}</p>
+    <p><span class="label">رقم الجوال:</span> {{ mobile_number }}</p>
+  </div>
+</body>
+</html>
