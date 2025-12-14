@@ -22,24 +22,63 @@
     h2 {
       text-align: center;
       margin-bottom: 20px;
+      color: #2c3e50;
     }
     p {
-      margin: 10px 0;
+      margin: 15px 0;
       font-size: 18px;
+      padding: 10px;
+      background-color: #f8f9fa;
+      border-radius: 5px;
     }
     .label {
       font-weight: bold;
+      color: #34495e;
+    }
+    .value {
+      color: #2980b9;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h2>معلوماتي الشخصية</h2>
-    <p><span class="label">الاسم الكامل:</span> {{ full_name }}</p>
-    <p><span class="label">رقم الطالب:</span> {{ student_id }}</p>
-    <p><span class="label">العنوان:</span> {{ address }}</p>
-    <p><span class="label">البريد الإلكتروني:</span> {{ email }}</p>
-    <p><span class="label">رقم الجوال:</span> {{ mobile_number }}</p>
+
+
+    <p>
+      <span class="label">الاسم الكامل:</span>
+      <span class="value">{{ first_name|capfirst|add:" "|add:last_name|capfirst }}</span>
+    </p>
+
+
+    <p>
+      <span class="label">رقم الطالب:</span>
+      <span class="value">{{ student_id|stringformat:"s" }}</span>
+    </p>
+
+
+    <p>
+      <span class="label">العنوان:</span>
+      <span class="value">{{ address|upper }}</span>
+    </p>
+
+
+    <p>
+      <span class="label">البريد الإلكتروني:</span>
+      <span class="value">{{ email|default:"mohammednasralla28@gmail.com" }}</span>
+    </p>
+
+
+   <p>
+  <span class="label">العمر:</span>
+  <span class="value">{{ date_of_birth|timesince }}</span>
+  </p>
+
+
+    <p>
+      <span class="label">رقم الجوال:</span>
+      <span class="value">{{ mobile_number }}</span>
+    </p>
   </div>
 </body>
 </html>
